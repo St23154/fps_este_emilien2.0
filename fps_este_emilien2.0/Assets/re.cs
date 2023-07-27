@@ -7,7 +7,7 @@ public class re : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       si ca marche cool 
     }
 
     // Update is called once per frame
