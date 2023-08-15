@@ -36,7 +36,7 @@
             "bindings": [
                 {
                     "name": "2D Vector",
-                    "id": "5d01e296-1218-444d-99fb-2c5b4e2bb5de",
+                    "id": "4715696f-60b4-454f-b07c-e8e8c95e56a2",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -47,8 +47,8 @@
                 },
                 {
                     "name": "up",
-                    "id": "346a822d-e6ec-4039-a1eb-3392be1c5a4e",
-                    "path": "<Keyboard>/z",
+                    "id": "7c2dcacd-68c4-4c4a-b4d3-c9e554c7fa2f",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -58,7 +58,7 @@
                 },
                 {
                     "name": "down",
-                    "id": "8e2a4757-d8ad-49a4-bb54-0e2f3d8057aa",
+                    "id": "28a3d914-f259-4095-89bf-96594d628aea",
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
@@ -69,8 +69,8 @@
                 },
                 {
                     "name": "left",
-                    "id": "be6d5d44-e296-4f9f-8db6-f62fb9f7625e",
-                    "path": "<Keyboard>/q",
+                    "id": "a85f225b-1919-479c-a1db-43d9a9db39e9",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -80,7 +80,7 @@
                 },
                 {
                     "name": "right",
-                    "id": "2c88a502-8d90-4841-b6ea-f90fc818d430",
+                    "id": "71479ac7-cdc8-40c8-9be9-e773584beb6a",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
@@ -103,7 +103,7 @@
                 {
                     "name": "",
                     "id": "38e73e7e-d2d7-4a48-b140-d5cec7a893c1",
-                    "path": "<Keyboard>/ctrl",
+                    "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
