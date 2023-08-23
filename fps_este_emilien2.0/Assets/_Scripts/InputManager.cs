@@ -60,7 +60,6 @@ namespace UnityTutorial.Manager
 
         private void onJump(InputAction.CallbackContext context)
         {
-            if(context.interaction is TapInteraction)
                 Jump = context.ReadValueAsButton();
         }
         
