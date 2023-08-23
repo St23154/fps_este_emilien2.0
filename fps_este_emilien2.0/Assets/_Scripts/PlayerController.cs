@@ -23,6 +23,9 @@ namespace UnityTutorial.PlayerControl
         private bool _hasAnimator;
         private int _xVelHash;
         private int _yVelHash;
+        private int _jumpHash;
+        private int _groundHash;
+        private int _fallingHash;
 
         private float _xRotation;
 
@@ -41,11 +44,15 @@ namespace UnityTutorial.PlayerControl
 
             _xVelHash = Animator.StringToHash("X_Velocity");
             _yVelHash = Animator.StringToHash("Y_Velocity");
+            _jumpHash = Animator.StringToHash("Jump");
+            _groundHash = Animator.StringToHash("Grounded");
+            _fallingHash = Animator.StringToHash("Falling");
         }
 
         private void FixedUpdate()
         {
             Move();
+            HandleJump();
         }
         private void LateUpdate()
         {
@@ -57,7 +64,7 @@ namespace UnityTutorial.PlayerControl
             if (!_hasAnimator) return;
 
             float targetSpeed = _inputManager.Run ? _runSpeed : _walkSpeed;
-            if (_inputManager.Move == Vector2.zero) targetSpeed = 0.1f;
+            if (_inputManager.Move == Vector2.zero) targetSpeed = 0;
 
 
 
@@ -90,6 +97,14 @@ namespace UnityTutorial.PlayerControl
             Camera.localRotation = Quaternion.Euler(_xRotation, 0, 0);
             _playerRigidbody.MoveRotation(_playerRigidbody.rotation * Quaternion.Euler(0, Mouse_X * MouseSensitivity * Time.smoothDeltaTime, 0));
         }
+
+        private void HandleJump()
+        {
+            if(!_hasAnimator) return;
+            if(!_inputManager.Jump) return;
+            _animator.SetTrigger(_jumpHash);
+        }
+
 
     }
 }
