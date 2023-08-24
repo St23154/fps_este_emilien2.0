@@ -31,6 +31,7 @@ namespace UnityTutorial.PlayerControl
         private int _jumpHash;
         private int _groundHash;
         private int _fallingHash;
+        private int _zVelHash;      
 
         private float _xRotation;
 
@@ -52,6 +53,7 @@ namespace UnityTutorial.PlayerControl
             _jumpHash = Animator.StringToHash("Jump");
             _groundHash = Animator.StringToHash("Grounded");
             _fallingHash = Animator.StringToHash("Falling");
+            _zVelHash = Animator.StringToHash("Z_Velocity");
         }
 
         private void FixedUpdate()
@@ -130,8 +132,8 @@ namespace UnityTutorial.PlayerControl
                 return;
             }
             //Falling
-            Debug.Log(_grounded);
             _grounded = false;
+            _animator.SetFloat(_zVelHash, _playerRigidbody.velocity.y);
             SetAnimationGrounding();
             return;
         }
