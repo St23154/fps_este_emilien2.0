@@ -57,7 +57,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.6603774
+      - time: 0.57274824
         functionName: JumpAddForce
         data: 
         objectReferenceParameter: {instanceID: 0}
